@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          abc:
+            issuer-uri: https://sso-erdp2-ga23.apps.ddns.e-lead.cn/auth/realms/erdp
+        registration:
+          abc:
+            client-id: erdp-app
+            client-secret: 1794a161-0a40-4aa6-8641-87da43ce181b
+            redirect-uri: http://localhost/demo/login/oauth2/code/abc
+logging:
+  level:
+    root: info
+server:  servlet:    context-path: /demo
+  forward-headers-strategy: native
